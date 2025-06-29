@@ -1,0 +1,23 @@
+{
+  "name": "mayankpandit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2",
+    "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "@pixi/core": "^7.4.3",
+    "@studio-freight/lenis": "^1.0.42",
+    "chart.js": "^4.5.0",
+    "gsap": "^3.13.0",
+    "ldrs": "^1.1.7",
+    "pixi.js": "^8.10.2"
+  }
+}

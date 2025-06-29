@@ -1,0 +1,98 @@
+.skills-container-list {
+    height: 100dvh;
+    width: 100dvw;
+    padding: 4rem 2rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    position: relative;
+}
+
+.skill-category {
+    position: relative;
+    overflow: visible;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(10, 10, 10, 0.8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(15, 15, 15, 0.3);
+}
+
+.skillbox1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+}
+
+.skillbox2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.skillbox3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.skillbox4 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.skillbox5 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+.skillbox6 {
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+
+.skillbox7 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    height: 15%;
+    width: 100%;
+    user-select: none;
+}
+
+.tags {
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    user-select: none;
+}
+
+.tags span {
+    background-color: rgb(66, 66, 66);
+    color: gainsboro;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.tags span:hover {
+    background-color: rgb(85, 85, 85);
+    cursor: pointer;
+}

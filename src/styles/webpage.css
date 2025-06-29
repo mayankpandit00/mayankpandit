@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: auto;
+    min-height: 100dvh;
+    color: white;
+    font-size: 16px;
+    font-family: 'Courier New', monospace !important;
+}
+
+html {
+    overflow: hidden;
+    background: #141414;
+}
+
+body {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --bouncy-size: 100;
+}
+
+input,
+textarea,
+select,
+button,
+a {
+    font-family: 'Courier New', monospace !important;
+}
+
+#mainContent {
+    will-change: transform;
+}
+
+#mainContent.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#mainContent.visible {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.8s ease 0.3s;
+}
+
+.section {
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+footer {
+    text-align: center;
+    user-select: none;
+}
