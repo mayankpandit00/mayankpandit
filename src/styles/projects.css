@@ -52,6 +52,10 @@
     transform: rotate(0deg) scale(1.05);
 }
 
+.projects-bottom-shadow {
+    display: none;
+}
+
 .open-project-container {
     height: 100dvh;
     width: 100dvw;
@@ -211,4 +215,44 @@
 
 .back-button:hover {
     background: #9a6b44;
+}
+
+@media (max-width: 480px) {
+    #projects {
+        padding-top: 2rem;
+        position: relative;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .projects-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .projects-bottom-shadow {
+        display: block;
+        position: absolute;
+        bottom: 1.1rem;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        pointer-events: none;
+        z-index: 10;
+        box-shadow: 0 -10px 10px -2px rgba(0, 0, 0, 0.75) inset;
+        -webkit-box-shadow: 0 -10px 10px -2px rgba(0, 0, 0, 0.75) inset;
+        -moz-box-shadow: 0 -10px 10px -2px rgba(0, 0, 0, 0.75) inset;
+    }
+
+    .project {
+        margin-top: 2.5rem;
+        height: auto;
+    }
+
+    .project-file {
+        width: 85%;
+    }
 }

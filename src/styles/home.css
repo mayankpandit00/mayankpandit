@@ -272,7 +272,7 @@
 }
 
 .social-links a:hover i {
-    color: #006400;
+    color: #007f00;
 }
 
 .right-home-section {
@@ -328,7 +328,7 @@ circle.bg {
 
 circle.progress {
     fill: none;
-    stroke: #00cc00;
+    stroke: #007f00;
     stroke-width: 10;
     r: 50;
     cx: 60;
@@ -353,4 +353,107 @@ circle.progress {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     color: lightgray;
+}
+
+@media (max-width: 480px) {
+    #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 1.875rem;
+    }
+
+    .left-home-section {
+        height: fit-content;
+        height: 28.5%;
+        width: 100%;
+        padding: 0;
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    .intro-name {
+        margin-top: 0.75rem;
+    }
+
+    .roles {
+        margin-top: 0.75rem;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .home-buttons {
+        display: none;
+    }
+
+    .social-links {
+        margin-top: -0.75rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        .social-preview {
+            display: none !important;
+        }
+    }
+
+    .right-home-section {
+        height: 68.5%;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .radar-container {
+        height: 80%;
+    }
+
+    .stats-container {
+        justify-content: space-evenly;
+        gap: 0.25rem;
+        height: 20%;
+        width: 100%;
+    }
+
+    .circle {
+        justify-content: space-evenly;
+        width: 20dvw;
+        height: 15dvh;
+        box-shadow: none;
+    }
+
+    .stats-container .circle svg {
+        display: none;
+    }
+
+    .number {
+        font-size: 1.5rem;
+    }
+
+    .label {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 0.5rem;
+        color: white;
+    }
+}
+
+@media (max-width: 420px) {
+    .left-home-section {
+        font-size: 2.19rem;
+    }
+
+    .number {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 412px) {
+    .left-home-section {
+        font-size: 1.97rem;
+    }
+
+    .number {
+        font-size: 1.1rem;
+    }
 }

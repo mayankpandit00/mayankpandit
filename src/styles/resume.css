@@ -1,6 +1,5 @@
 #resume {
     padding: 0;
-    opacity: 1;
     transition: opacity 0.1s ease-out;
     align-items: start;
     height: 250dvh;
@@ -35,7 +34,7 @@
     align-items: center;
     justify-content: start;
     gap: 1.5rem;
-    background: rgba(10, 10, 10, 0.8);
+    background: rgba(10, 10, 10, 0.9);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(15, 15, 15, 0.3);
 }
@@ -157,7 +156,7 @@
     align-items: start;
     user-select: none;
     gap: 2rem;
-    background: rgba(10, 10, 10, 0.8);
+    background: rgba(10, 10, 10, 0.9);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(15, 15, 15, 0.3);
     padding: 1rem;
@@ -197,6 +196,7 @@
     padding-left: 1.5rem;
     gap: 1rem;
     width: 100%;
+
 }
 
 .resume-section-descriptions {
@@ -252,7 +252,8 @@
 .resume-section-descriptions-description {
     font-size: 1rem;
     height: 100%;
-    padding: 1.25rem 5.5rem 0 1.75rem;
+    padding: 0.75rem 1.3rem;
+    text-align: justify;
 }
 
 .resume-section-gallery {
@@ -350,4 +351,130 @@
 
 .resume-section-gallery-middle-bottom img.selected {
     border: 2px solid #007f00;
+}
+
+@media (max-width: 480px) {
+    #resume {
+        padding-top: 4rem;
+        align-items: center;
+        height: auto;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .resume-info-conatiner {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resume-info {
+        height: 100%;
+        width: 95%;
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 50px;
+    }
+
+    .resume-sections-container {
+        width: 100%;
+        height: 100%;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .resume-section {
+        width: 95%;
+        border-radius: 50px;
+    }
+
+    .resume-section-title {
+        font-size: 2.5rem;
+    }
+
+    .resume-section-descriptions-container {
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+
+    .resume-section-descriptions-heading {
+        font-size: 1.25rem;
+    }
+
+    .resume-section-descriptions-subheading {
+        font-size: 0.85rem;
+        padding: 0 0 0 1.25rem;
+    }
+
+    .resume-section-descriptions-description {
+        font-size: 0.75rem;
+        height: 100%;
+        padding: 0.5rem 1.3rem;
+    }
+
+    .resume-education {
+        height: 45dvh;
+        border-radius: 50px;
+    }
+
+    .resume-certifications {
+        height: 55dvh;
+        border-radius: 50px;
+    }
+
+    .resume-section-gallery {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .resume-section-gallery-left,
+    .resume-section-gallery-right {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .resume-section-title {
+        font-size: 2rem;
+    }
+
+    .resume-section-descriptions-container {
+        padding-top: 0.5rem;
+    }
+
+    .resume-section-descriptions-heading {
+        font-size: 1rem;
+    }
+
+    .resume-section-descriptions-subheading {
+        font-size: 0.8rem;
+    }
+
+    .resume-section-descriptions-description {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .resume-section-descriptions-container {
+        padding-top: 0.25rem;
+    }
+
+    .resume-section-descriptions-heading {
+        font-size: 0.9rem;
+    }
+
+    .resume-section-descriptions-subheading {
+        font-size: 0.7rem;
+    }
+
+    .resume-section-descriptions-description {
+        font-size: 0.5rem;
+    }
 }

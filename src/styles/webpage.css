@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body,
@@ -20,6 +21,7 @@ html {
 
 body {
     background-color: transparent;
+    overflow-x: clip;
 }
 
 body::-webkit-scrollbar {
@@ -35,7 +37,7 @@ textarea,
 select,
 button,
 a {
-    font-family: 'Courier New', monospace !important;
+    font-family: inherit;
 }
 
 #mainContent {
@@ -62,7 +64,14 @@ a {
     padding: 1.25rem;
 }
 
-footer {
-    text-align: center;
-    user-select: none;
+@media (max-width: 480px) {
+    :root {
+        --bouncy-size: 70;
+    }
+}
+
+@media (max-width: 412px) {
+    :root {
+        --bouncy-size: 50;
+    }
 }

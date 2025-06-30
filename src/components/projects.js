@@ -142,4 +142,25 @@ export default function initProjects() {
 
     window.openProject = openProject;
     window.closeProject = closeProject;
+
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            const shadow = document.querySelector('.projects-bottom-shadow');
+            if (entry.isIntersecting) {
+                shadow.style.display = 'none';
+            } else {
+                shadow.style.display = 'block';
+            }
+        },
+        {
+            root: document.querySelector('.projects-container'),
+            threshold: 1.0
+        }
+    );
+
+    const lastProject = document.querySelector('.last-project');
+    if (lastProject) {
+        observer.observe(lastProject);
+    }
+
 }

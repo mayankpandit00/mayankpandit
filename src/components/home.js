@@ -21,6 +21,7 @@ Chart.register(
 
 export default function initHome() {
     function getFontSize() {
+        if (window.innerWidth <= 412) return 10;
         if (window.innerWidth <= 768) return 12;
         if (window.innerWidth <= 1024) return 14;
         return 16;

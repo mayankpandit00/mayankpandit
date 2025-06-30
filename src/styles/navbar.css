@@ -71,3 +71,41 @@
 .navbar button.active {
     background-color: #007f00;
 }
+
+@media (max-width: 480px) {
+    .nav-text {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #cipher {
+        display: none;
+    }
+
+    .navbar ul {
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 0;
+    }
+
+    .navbar button {
+        width: 3.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .navbar button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 412px) {
+    .navbar button {
+        font-size: 1.1rem;
+    }
+}

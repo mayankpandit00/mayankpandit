@@ -96,3 +96,66 @@
     background-color: rgb(85, 85, 85);
     cursor: pointer;
 }
+
+@media (max-width: 480px) {
+    .skills-container-list {
+        padding: 4rem 1rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+        border-radius: 16px;
+    }
+
+    .skill-category {
+        border-radius: 12px;
+        gap: 0.5rem;
+        padding: 0.25rem;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .skill-category h3 {
+        height: 20%;
+        font-size: 1rem;
+    }
+
+    .tags {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 0.25rem;
+        width: 100%;
+        height: 100%;
+        overflow-x: scroll;
+        scrollbar-width: auto;
+    }
+
+    .tags::-webkit-scrollbar {
+        height: 2px;
+    }
+
+    .tags::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    }
+
+    .tags span {
+        padding: 3px 6px;
+        font-size: 0.8rem;
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .skills-container-list {
+        padding: 4rem 0.5rem 0 0.5rem;
+    }
+
+    .skill-category h3 {
+        font-size: 0.8rem;
+    }
+
+    .tags span {
+        font-size: 0.75rem;
+    }
+}
