@@ -99,7 +99,7 @@
 
 @media (max-width: 480px) {
     .skills-container-list {
-        padding: 4rem 1rem 1rem 1rem;
+        padding: 4rem 1.2rem 1.2rem 1.2rem;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -148,7 +148,7 @@
 
 @media (max-width: 420px) {
     .skills-container-list {
-        padding: 4rem 0.5rem 0 0.5rem;
+        padding: 4rem 0.7rem 1rem 0.7rem;
     }
 
     .skill-category h3 {

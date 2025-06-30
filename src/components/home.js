@@ -1,22 +1,22 @@
 import {
-  Chart,
-  RadarController,       
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
+    Chart,
+    RadarController,
+    RadialLinearScale,
+    PointElement,
+    LineElement,
+    Filler,
+    Tooltip,
+    Legend
 } from 'chart.js';
 
 Chart.register(
-  RadarController,
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
+    RadarController,
+    RadialLinearScale,
+    PointElement,
+    LineElement,
+    Filler,
+    Tooltip,
+    Legend
 );
 
 export default function initHome() {
@@ -93,10 +93,36 @@ export default function initHome() {
             const countTo = parseInt(circle.dataset.count);
             const suffix = circle.dataset.suffix || '';
             const progress = circle.querySelector('.progress');
+            const bg = circle.querySelector('.bg');
             const number = circle.querySelector('.number');
 
-            const circumference = 2 * Math.PI * 50;
+            let r, cx, cy;
+            if (window.innerWidth <= 400) {
+                r = 20;
+                cx = 25;
+                cy = 27.5;
+            } else if (window.innerWidth <= 480) {
+                r = 25;
+                cx = 30;
+                cy = 32.5;
+            } else {
+                r = 50;
+                cx = 60;
+                cy = 60;
+            }
+
+            [progress, bg].forEach(el => {
+                el.setAttribute('r', r);
+                el.setAttribute('cx', cx);
+                el.setAttribute('cy', cy);
+                el.setAttribute('stroke-width', window.innerWidth <= 400 ? 4 : window.innerWidth <= 480 ? 5 : 10);
+            });
+
+            const circumference = 2 * Math.PI * r;
             const offset = circumference - (percent / 100) * circumference;
+
+            progress.style.transition = 'none';
+            progress.style.strokeDasharray = circumference;
             progress.style.strokeDashoffset = circumference;
 
             setTimeout(() => {
@@ -118,9 +144,9 @@ export default function initHome() {
             }, 500);
         });
     }
-    
+
     setTimeout(() => {
         initRadarChart();
-    animateCircles();
+        animateCircles();
     }, 2500);
 }

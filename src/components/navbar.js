@@ -27,7 +27,7 @@ export default function initNavbar() {
                 });
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
     sections.forEach(section => sectionObserver.observe(section));
 
@@ -169,7 +169,17 @@ export default function initNavbar() {
     document.querySelectorAll('.nav-button[data-target], .home-buttons-button[data-target]').forEach(btn => {
         btn.addEventListener('click', function () {
             const target = document.getElementById(this.getAttribute('data-target'));
-            if (target) lenis.scrollTo(target);
+            // if (target) lenis.scrollTo(target);
+
+            if (!target) return;
+
+            const isMobile = window.innerWidth <= 480;
+
+            if (isMobile) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                lenis.scrollTo(target);
+            }
         });
     });
 }

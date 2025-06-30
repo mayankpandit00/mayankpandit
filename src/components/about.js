@@ -24,7 +24,7 @@ export default function initAbout() {
         });
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   observer.observe(section);
 }

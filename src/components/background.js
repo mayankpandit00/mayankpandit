@@ -3,7 +3,7 @@ export default function initMatrixRain() {
     const ctx = bgCanvas.getContext('2d');
 
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZ'.split('');
-    const fontSize = 10;
+    const fontSize = window.innerWidth <= 480 ? 6 : 10;
     ctx.font = `${fontSize}px monospace`;
     ctx.textBaseline = 'top';
 
@@ -21,7 +21,15 @@ export default function initMatrixRain() {
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         columns = Math.floor(bgCanvas.width / dpr / fontSize) + 2;
-        drops = new Uint16Array(columns).fill(1);
+
+        if (window.innerWidth <= 480) {
+            columns = Math.floor(columns * 1.5);
+        }
+
+        drops = new Float32Array(columns);
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.random() * (bgCanvas.height / fontSize);
+        }
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);

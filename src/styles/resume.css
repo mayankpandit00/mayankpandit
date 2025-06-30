@@ -110,7 +110,6 @@
 }
 
 @keyframes shake {
-
     5%,
     15% {
         transform: translateX(2%);
@@ -196,7 +195,6 @@
     padding-left: 1.5rem;
     gap: 1rem;
     width: 100%;
-
 }
 
 .resume-section-descriptions {
@@ -356,6 +354,7 @@
 @media (max-width: 480px) {
     #resume {
         padding-top: 4rem;
+        padding-bottom: 1rem;
         align-items: center;
         height: auto;
         flex-direction: column;
