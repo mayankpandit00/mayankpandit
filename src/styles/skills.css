@@ -99,7 +99,7 @@
 
 @media (max-width: 480px) {
     .skills-container-list {
-        padding: 4rem 1rem 0 1rem;
+        padding: 4rem 1rem 1rem 1rem;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;

@@ -328,7 +328,7 @@ circle.bg {
 
 circle.progress {
     fill: none;
-    stroke: #007f00;
+    stroke: #00cc00;
     stroke-width: 10;
     r: 50;
     cx: 60;
